@@ -68,6 +68,7 @@
 		@include flex(column, stretch, space-between, wrap);
 		position: relative;
 		z-index: 5;
+		gap: 4vw;
 		&::after {
 			content: "";
 			width: 90%;
