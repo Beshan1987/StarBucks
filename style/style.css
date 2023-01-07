@@ -178,7 +178,7 @@ a {
 }
 
 .header {
-  background: url(/img/main_waves.png) no-repeat right center;
+  background: url(./img/main_waves.png) no-repeat right center;
   background-size: 50% 50%;
 }
 
@@ -290,6 +290,7 @@ a {
   letter-spacing: -0.02em;
   border: none;
   padding: 3.5087719298% 0;
+  display: block;
 }
 .header__main-list .header__main-item:first-child .header__main-bt-list ._green-bt {
   flex: 0 1 58.4210526316%;

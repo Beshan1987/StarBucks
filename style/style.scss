@@ -19,7 +19,7 @@
 }
 
 .header {
-	background: url(/img/main_waves.png) no-repeat right center;
+	background: url(./img/main_waves.png) no-repeat right center;
 	background-size: 50% 50%;
 }
 
@@ -119,6 +119,7 @@
 				letter-spacing: -0.02em;
 				border: none;
 				padding: calc(20 / 570 * 100%) 0;
+				display: block;
 				&:hover {
 					@extend %hover_bt;
 				}
