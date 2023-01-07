@@ -178,7 +178,7 @@ a {
 }
 
 .header {
-  background: url(./img/main_waves.png) no-repeat;
+  background: url(./img/main_waves.png) no-repeat right center;
   background-size: 50% 50%;
   background-position: 100% 60%;
 }
@@ -384,7 +384,7 @@ a {
   border-radius: 46px;
   padding: 3.9805825243% 7.572815534%;
   position: relative;
-  margin-top: calc(-50.4854368932% + 10vw);
+  margin-top: -40%;
 }
 .features__main-list::after {
   content: "";

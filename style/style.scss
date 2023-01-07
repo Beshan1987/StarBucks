@@ -19,7 +19,7 @@
 }
 
 .header {
-	background: url(./img/main_waves.png) no-repeat;
+	background: url(./img/main_waves.png) no-repeat right center;
 	background-size: 50% 50%;
 	background-position: 100% 60%;
 }
@@ -210,7 +210,7 @@
 	border-radius: 46px;
 	padding: calc(41 / 1030 * 100%) calc(78 / 1030 * 100%);
 	position: relative;
-	margin-top: calc(-520 / 1030 * 100% + 10vw);
+	margin-top: -40%;
 	&::after {
 		content: "";
 		position: absolute;
