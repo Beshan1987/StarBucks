@@ -1,18 +1,17 @@
 @import "fonts";
 @import "reset";
-@import "media";
 @import "variables";
 
 .content {
-	padding: 0 5px;
 	overflow: hidden;
 }
 ._container {
-	max-width: 1240px;
+	max-width: 1270px;
 	height: 100%;
 	width: 100%;
 	color: #ffffff;
 	margin: 0 auto;
+	padding: 0 30px;
 }
 
 .wrapper {
@@ -21,7 +20,6 @@
 
 .header {
 	background: url(/img/main_waves.png) no-repeat right center;
-	background-size: contain;
 	background-size: 50% 50%;
 }
 
@@ -38,7 +36,15 @@
 		color: #d9d9d9;
 		@extend %font_400;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		@include font_size(calc(14px + 0.4vw), calc(23 / 19 * 100%));
+		@include font_size(calc(12px + 0.6vw), calc(23 / 19 * 100%));
+	}
+	.nav-main:first-child {
+		position: relative;
+		padding-bottom: calc(48 / 1240 * 100%);
+		width: 20%;
+		.nav-item-img {
+			@extend %adapt_img;
+		}
 	}
 }
 
@@ -90,7 +96,7 @@
 		.header__main-title {
 			color: inherit;
 			@extend %font_800;
-			@include font_size(calc(50px + 2vw), 109%);
+			@include font_size(calc(40px + 1.2vw), 109%);
 			.green {
 				background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
 				-webkit-text-fill-color: transparent;
@@ -159,6 +165,16 @@
 			top: 25%;
 			left: -5%;
 		}
+		.header__main-item-discont {
+			position: absolute;
+			background: url(/img/discont_bg_discont.svg) no-repeat center;
+			background-size: cover;
+			height: calc(183 / 470 * 100%);
+			width: calc(183 / 470 * 100%);
+			z-index: 5;
+			top: -10%;
+			right: 0;
+		}
 		&::before {
 			content: "";
 			width: calc(676 / 470 * 100%);
@@ -171,14 +187,14 @@
 		}
 		.header__main-img {
 			@extend %adapt_img;
-			object-fit: contain;
+			object-fit: cover;
 			z-index: 5;
 		}
 	}
 }
 
 .features_container {
-	max-width: 1030px;
+	padding: 0 calc(105 / 1270 * 100%);
 }
 
 .features__main-list {
@@ -193,7 +209,7 @@
 	padding: calc(41 / 1030 * 100%) calc(78 / 1030 * 100%);
 	gap: 8vw;
 	position: relative;
-	margin-top: -400px;
+	margin-top: calc(-520 / 1030 * 100% + 10vw);
 	&::after {
 		content: "";
 		position: absolute;
@@ -223,6 +239,7 @@
 			background-size: cover;
 			position: relative;
 			padding-bottom: calc(148 / 179 * 100%);
+			padding-left: 1%;
 			.features__item-img {
 				@extend %adapt_img;
 			}
@@ -238,3 +255,5 @@
 		}
 	}
 }
+
+@import "media";
