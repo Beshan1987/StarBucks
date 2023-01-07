@@ -14,7 +14,7 @@
     margin-top: 10%;
   }
   .header {
-    background: url(/img/main_waves.png) no-repeat right center;
+    background: url(./img/main_waves.png) no-repeat right center;
     background-position-y: calc(24% + 10vw);
     background-size: 90% 35%;
     margin-bottom: 10%;

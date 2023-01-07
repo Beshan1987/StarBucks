@@ -57,24 +57,22 @@
 }
 
 .header__main-list {
-	@include flex(row, center, stretch, wrap);
+	@include flex(row, center, space-between, wrap);
 	color: #ffffff;
-	gap: 5vw;
 	z-index: 5;
 	position: relative;
 	padding-bottom: calc(520 / 1240 * 100%);
 
 	.header__main-item:first-child {
-		flex: 1 1;
-		@include flex(column, stretch, stretch, wrap);
-		gap: 5vw;
+		flex: 0 1 calc(570 / 1240 * 100%);
+		@include flex(column, stretch, space-between, wrap);
 		position: relative;
 		z-index: 5;
 		&::after {
 			content: "";
 			width: 90%;
 			height: 90%;
-			background: url(/img/main_left_bg.png) no-repeat;
+			background: url(./img/main_left_bg.png) no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: -25%;
@@ -86,7 +84,7 @@
 			content: "";
 			width: 90%;
 			height: 90%;
-			background: url(/img/main_right_bg.png) no-repeat;
+			background: url(./img/main_right_bg.png) no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: 20%;
@@ -134,7 +132,7 @@
 			}
 		}
 		.header__main-awards-list {
-			@include flex(row, stretch, stretch, wrap);
+			@include flex(row, stretch, stretch, nowrap);
 			gap: 7vw;
 			.header__main-awards-item {
 				@include flex(column, stretch, stretch, wrap);
@@ -160,7 +158,7 @@
 			content: "";
 			width: calc(676 / 470 * 100%);
 			height: 100%;
-			background: url(/img/cup_bg_right_bottom.png) no-repeat;
+			background: url(./img/cup_bg_right_bottom.png) no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: 25%;
@@ -168,7 +166,7 @@
 		}
 		.header__main-item-discont {
 			position: absolute;
-			background: url(/img/discont_bg_discont.svg) no-repeat center;
+			background: url(./img/discont_bg_discont.svg) no-repeat center;
 			background-size: cover;
 			height: calc(183 / 470 * 100%);
 			width: calc(183 / 470 * 100%);
@@ -180,7 +178,7 @@
 			content: "";
 			width: calc(676 / 470 * 100%);
 			height: 100%;
-			background: url(/img/cup_bg_left.png) no-repeat;
+			background: url(./img/cup_bg_left.png) no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: -20%;
@@ -208,13 +206,12 @@
 	);
 	border-radius: 46px;
 	padding: calc(41 / 1030 * 100%) calc(78 / 1030 * 100%);
-	gap: 8vw;
 	position: relative;
 	margin-top: calc(-520 / 1030 * 100% + 10vw);
 	&::after {
 		content: "";
 		position: absolute;
-		background: url(/img/bg_after__main_feature.png) no-repeat;
+		background: url(./img/bg_after__main_feature.png) no-repeat;
 		background-size: cover;
 		padding: 10%;
 		top: -25%;
@@ -223,7 +220,7 @@
 	&::before {
 		content: "";
 		position: absolute;
-		background: url(/img/before_feature.png) no-repeat;
+		background: url(./img/before_feature.png) no-repeat;
 		background-size: contain;
 		padding: 25%;
 		top: -20%;
@@ -233,10 +230,10 @@
 
 	.features__item {
 		@include flex(column, stretch, stretch, wrap);
-		flex: 1;
+		flex: 0 1 28%;
 		text-align: center;
 		.features__item-img-inner {
-			background: url(/img/circle_bg_main.png) no-repeat center;
+			background: url(./img/circle_bg_main.png) no-repeat center;
 			background-size: cover;
 			position: relative;
 			padding-bottom: calc(148 / 179 * 100%);

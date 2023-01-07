@@ -216,22 +216,20 @@ a {
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
   color: #ffffff;
-  gap: 5vw;
   z-index: 5;
   position: relative;
   padding-bottom: 41.935483871%;
 }
 .header__main-list .header__main-item:first-child {
-  flex: 1 1;
+  flex: 0 1 45.9677419355%;
   display: flex;
   flex-flow: column;
   align-items: stretch;
-  justify-content: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5vw;
   position: relative;
   z-index: 5;
 }
@@ -239,7 +237,7 @@ a {
   content: "";
   width: 90%;
   height: 90%;
-  background: url(/img/main_left_bg.png) no-repeat;
+  background: url(./img/main_left_bg.png) no-repeat;
   background-size: contain;
   position: absolute;
   top: -25%;
@@ -251,7 +249,7 @@ a {
   content: "";
   width: 90%;
   height: 90%;
-  background: url(/img/main_right_bg.png) no-repeat;
+  background: url(./img/main_right_bg.png) no-repeat;
   background-size: contain;
   position: absolute;
   top: 20%;
@@ -305,7 +303,7 @@ a {
   flex-flow: row;
   align-items: stretch;
   justify-content: stretch;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 7vw;
 }
 .header__main-list .header__main-item:first-child .header__main-awards-list .header__main-awards-item {
@@ -337,7 +335,7 @@ a {
   content: "";
   width: 143.829787234%;
   height: 100%;
-  background: url(/img/cup_bg_right_bottom.png) no-repeat;
+  background: url(./img/cup_bg_right_bottom.png) no-repeat;
   background-size: contain;
   position: absolute;
   top: 25%;
@@ -345,7 +343,7 @@ a {
 }
 .header__main-list .header__main-item:last-child .header__main-item-discont {
   position: absolute;
-  background: url(/img/discont_bg_discont.svg) no-repeat center;
+  background: url(./img/discont_bg_discont.svg) no-repeat center;
   background-size: cover;
   height: 38.9361702128%;
   width: 38.9361702128%;
@@ -357,7 +355,7 @@ a {
   content: "";
   width: 143.829787234%;
   height: 100%;
-  background: url(/img/cup_bg_left.png) no-repeat;
+  background: url(./img/cup_bg_left.png) no-repeat;
   background-size: contain;
   position: absolute;
   top: -20%;
@@ -382,14 +380,13 @@ a {
   background: linear-gradient(264.52deg, #ffffff 4.95%, #e5e5e5 64.19%, #fbfbfb 88.37%);
   border-radius: 46px;
   padding: 3.9805825243% 7.572815534%;
-  gap: 8vw;
   position: relative;
   margin-top: calc(-50.4854368932% + 10vw);
 }
 .features__main-list::after {
   content: "";
   position: absolute;
-  background: url(/img/bg_after__main_feature.png) no-repeat;
+  background: url(./img/bg_after__main_feature.png) no-repeat;
   background-size: cover;
   padding: 10%;
   top: -25%;
@@ -398,7 +395,7 @@ a {
 .features__main-list::before {
   content: "";
   position: absolute;
-  background: url(/img/before_feature.png) no-repeat;
+  background: url(./img/before_feature.png) no-repeat;
   background-size: contain;
   padding: 25%;
   top: -20%;
@@ -411,11 +408,11 @@ a {
   align-items: stretch;
   justify-content: stretch;
   flex-wrap: wrap;
-  flex: 1;
+  flex: 0 1 28%;
   text-align: center;
 }
 .features__main-list .features__item .features__item-img-inner {
-  background: url(/img/circle_bg_main.png) no-repeat center;
+  background: url(./img/circle_bg_main.png) no-repeat center;
   background-size: cover;
   position: relative;
   padding-bottom: 82.6815642458%;
@@ -481,7 +478,7 @@ a {
     margin-top: 10%;
   }
   .header {
-    background: url(/img/main_waves.png) no-repeat right center;
+    background: url(./img/main_waves.png) no-repeat right center;
     background-position-y: calc(24% + 10vw);
     background-size: 90% 35%;
     margin-bottom: 10%;
