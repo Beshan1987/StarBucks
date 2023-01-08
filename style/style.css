@@ -157,7 +157,7 @@ a {
   left: 0;
 }
 
-.header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
+.delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
   transition: 0.5s;
   opacity: 0.8;
   cursor: pointer;
@@ -168,6 +168,18 @@ a {
   opacity: 0.8;
   color: #237249;
   cursor: pointer;
+}
+
+.delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list::after {
+  content: "";
+  position: absolute;
+  background-size: contain;
+}
+
+.delicious__main-list .delicious__item:first-child ::before {
+  content: "";
+  position: absolute;
+  background-size: cover;
 }
 
 .content {
@@ -447,6 +459,7 @@ a {
   background: url(./img/delicious_waves.png) no-repeat;
   background-size: 62% 60%;
   background-position: 100% 120%;
+  padding-bottom: 5.1612903226%;
 }
 
 .delicious__main-list {
@@ -455,6 +468,15 @@ a {
   align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+}
+.delicious__main-list::after {
+  background: url(./img/fog_grey.png) no-repeat center;
+  padding-bottom: 100%;
+  width: 100%;
+  left: -19%;
+  top: -55%;
 }
 .delicious__main-list .delicious__item:first-child {
   flex: 0 1 42.1487603306%;
@@ -468,6 +490,7 @@ a {
 .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
   display: block;
   height: 108%;
+  z-index: 5;
 }
 .delicious__main-list .delicious__item:first-child ::after {
   content: "";
@@ -478,6 +501,14 @@ a {
   height: 48.0392156863%;
   top: 0;
   right: -5%;
+  z-index: 5;
+}
+.delicious__main-list .delicious__item:first-child ::before {
+  background: url(./img/fog_green.png) no-repeat center;
+  padding-bottom: 100%;
+  width: 100%;
+  left: -40%;
+  bottom: -20%;
 }
 .delicious__main-list .delicious__item:last-child {
   flex: 0 1 36.9421487603%;
@@ -486,27 +517,60 @@ a {
   align-items: stretch;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+}
+.delicious__main-list .delicious__item:last-child::after {
+  background: url(./img/fog_grey.png) no-repeat center;
+  padding-bottom: 100%;
+  width: 100%;
+  left: -29%;
+  top: 47%;
+}
+.delicious__main-list .delicious__item:last-child::before {
+  background: url(./img/fog_green.png) no-repeat center;
+  padding-bottom: 100%;
+  width: 100%;
+  left: 0%;
+  top: -10%;
 }
 .delicious__main-list .delicious__item:last-child .delicious__item-bt-wrap {
   background: url(./img/delicious_bt_bg.png) no-repeat;
   background-size: cover;
   padding: 22.3713646532% 13.6465324385%;
   text-align: center;
+  min-width: 193px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
 }
 .delicious__main-list .delicious__item:last-child .delicious__item-bt {
   background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
   border-radius: 82.834px;
-  padding: 4.4742729306% 18.5682326622% 4.4742729306% 18.5682326622%;
+  padding: 4.4742729306% 13.4228187919% 4.4742729306% 20.1342281879%;
   border: none;
+  margin: 0 auto;
 }
 .delicious__main-list .delicious__item:last-child .delicious__item-bt p {
-  background: url(./img/delicious_bt_play.png) no-repeat center left;
-  background-size: contain;
-  padding-left: 30px;
   color: #ffffff;
-  font-size: calc(8px + 0.8vw);
+  font-size: calc(10px + 0.5vw);
   line-height: 146%;
-  min-width: 135px;
+  min-width: 150px;
+  position: relative;
+  text-align: center;
+}
+.delicious__main-list .delicious__item:last-child .delicious__item-bt p::before {
+  content: "";
+  position: absolute;
+  background: url(./img/delicious_bt_play.svg) no-repeat center left;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: -20%;
 }
 
 @media (max-width: 910px) {
@@ -542,7 +606,7 @@ a {
     top: 0;
     left: 0;
   }
-  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
+  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover {
     transition: 0.5s;
     opacity: 0.8;
     cursor: pointer;
@@ -552,6 +616,16 @@ a {
     opacity: 0.8;
     color: #237249;
     cursor: pointer;
+  }
+  .delicious__main-list::after, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before {
+    content: "";
+    position: absolute;
+    background-size: contain;
+  }
+  .delicious__main-list .delicious__item:first-child ::before {
+    content: "";
+    position: absolute;
+    background-size: cover;
   }
   .header__main-list {
     display: flex;
@@ -615,5 +689,16 @@ a {
   .delicious__main-list .delicious__item:first-child ::after {
     top: 20%;
     right: -55%;
+  }
+  .delicious__main-list .delicious__item:last-child .delicious__item-bt p::before {
+    left: -5%;
+  }
+  .delicious__main-list::after {
+    background: url(./img/fog_green.png) no-repeat center;
+    padding-bottom: 60%;
+    width: 65%;
+    left: 47%;
+    top: 0%;
+    background-size: contain;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -264,10 +264,22 @@
 	background: url(./img/delicious_waves.png) no-repeat;
 	background-size: 62% 60%;
 	background-position: 100% 120%;
+	padding-bottom: calc(64 / 1240 * 100%);
 }
 
 .delicious__main-list {
 	@include flex(row, stretch, space-between, wrap);
+	position: relative;
+	z-index: 5;
+	&::after {
+		@extend %before_contain;
+		background: url(./img/fog_grey.png) no-repeat center;
+		padding-bottom: 100%;
+		width: 100%;
+		left: -19%;
+		top: -55%;
+	}
+
 	.delicious__item:first-child {
 		flex: 0 1 calc(510 / 1210 * 100%);
 		.delicious__item-wrap {
@@ -275,10 +287,12 @@
 			background-size: 90% 90%;
 			padding-bottom: calc(720 / 510 * 100%);
 			position: relative;
+
 			.delicious__item-img {
 				@extend %adapt_img_big;
 				display: block;
 				height: 108%;
+				z-index: 5;
 			}
 		}
 		::after {
@@ -290,33 +304,77 @@
 			height: calc(245 / 510 * 100%);
 			top: 0;
 			right: -5%;
+			z-index: 5;
+		}
+		::before {
+			@extend %before_cover;
+			background: url(./img/fog_green.png) no-repeat center;
+			padding-bottom: 100%;
+			width: 100%;
+			left: -40%;
+			bottom: -20%;
 		}
 	}
 	.delicious__item:last-child {
 		flex: 0 1 calc(447 / 1210 * 100%);
 		@include flex(column, stretch, space-evenly, wrap);
+		position: relative;
+		z-index: 5;
+		&::after {
+			@extend %before_contain;
+			background: url(./img/fog_grey.png) no-repeat center;
+			padding-bottom: 100%;
+			width: 100%;
+			left: -29%;
+			top: 47%;
+		}
+		&::before {
+			@extend %before_contain;
+			background: url(./img/fog_green.png) no-repeat center;
+			padding-bottom: 100%;
+			width: 100%;
+			left: 0%;
+			top: -10%;
+		}
 
 		.delicious__item-bt-wrap {
 			background: url(./img/delicious_bt_bg.png) no-repeat;
 			background-size: cover;
 			padding: calc(100 / 447 * 100%) calc(61 / 447 * 100%);
 			text-align: center;
+			min-width: 193px;
+			@include flex(row, center, center, wrap);
+			position: relative;
+			z-index: 5;
 		}
 		.delicious__item-bt {
 			background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
 			border-radius: 82.834px;
-			padding: calc(20 / 447 * 100%) calc(83 / 447 * 100%) calc(20 / 447 * 100%)
-				calc(83 / 447 * 100%);
+			padding: calc(20 / 447 * 100%) calc(60 / 447 * 100%) calc(20 / 447 * 100%)
+				calc(90 / 447 * 100%);
 			border: none;
+			margin: 0 auto;
+			&:hover {
+				@extend %hover_bt;
+			}
 
 			p {
-				background: url(./img/delicious_bt_play.png) no-repeat center left;
-				background-size: contain;
-				padding-left: 30px;
 				color: #ffffff;
 				@extend %font_600;
-				@include font_size(calc(8px + 0.8vw), 146%);
-				min-width: 135px;
+				@include font_size(calc(10px + 0.5vw), 146%);
+				min-width: 150px;
+				position: relative;
+				text-align: center;
+
+				&::before {
+					content: "";
+					position: absolute;
+					background: url(./img/delicious_bt_play.svg) no-repeat center left;
+					background-size: contain;
+					width: 100%;
+					height: 100%;
+					left: -20%;
+				}
 			}
 		}
 	}

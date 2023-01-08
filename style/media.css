@@ -62,4 +62,15 @@
     top: 20%;
     right: -55%;
   }
+  .delicious__main-list .delicious__item:last-child .delicious__item-bt p::before {
+    left: -5%;
+  }
+  .delicious__main-list::after {
+    background: url(./img/fog_green.png) no-repeat center;
+    padding-bottom: 60%;
+    width: 65%;
+    left: 47%;
+    top: 0%;
+    background-size: contain;
+  }
 }/*# sourceMappingURL=media.css.map */
