@@ -34,4 +34,32 @@
     top: -6%;
     left: 75%;
   }
+  .delicious__main-list {
+    flex-flow: column;
+    width: 100%;
+    gap: 3vw;
+  }
+  .delicious__main-list .delicious__item:first-child {
+    width: 60%;
+  }
+  .delicious__main-list .delicious__item:last-child .delicious__item-bt-wrap {
+    width: 90%;
+    margin-top: 2vw;
+  }
+  .delicious__main-list .delicious__item:last-child {
+    width: 80%;
+  }
+  .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+    height: 107%;
+    width: 95%;
+  }
+  .delicious {
+    background: url(./img/delicious_bg_small_waves.png) no-repeat;
+    background-size: 100% 60%;
+    background-position: -10% -15%;
+  }
+  .delicious__main-list .delicious__item:first-child ::after {
+    top: 20%;
+    right: -55%;
+  }
 }/*# sourceMappingURL=media.css.map */

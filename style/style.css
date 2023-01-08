@@ -119,7 +119,7 @@ a {
     scroll-behavior: auto !important;
   }
 } /*# sourceMappingURL=reset.css.map */
-.header__main-list .header__main-item:first-child .header__main-sub, .nav-list .nav-main {
+.header__main-sub, .nav-list .nav-main {
   font-family: "Montserrat";
   font-weight: 400;
 }
@@ -129,12 +129,12 @@ a {
   font-weight: 500;
 }
 
-.header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item {
+.delicious__main-list .delicious__item:last-child .delicious__item-bt p, .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item {
   font-family: "Montserrat";
   font-weight: 600;
 }
 
-.header__main-list .header__main-item:first-child .header__main-title {
+.header__main-title {
   font-family: "Montserrat";
   font-weight: 800;
 }
@@ -145,6 +145,16 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
+}
+
+.delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
@@ -258,21 +268,6 @@ a {
   left: 40%;
   z-index: 1;
 }
-.header__main-list .header__main-item:first-child .header__main-title {
-  color: inherit;
-  font-size: calc(40px + 1.2vw);
-  line-height: 109%;
-}
-.header__main-list .header__main-item:first-child .header__main-title .green {
-  background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.header__main-list .header__main-item:first-child .header__main-sub {
-  font-size: calc(10px + 0.6vw);
-  line-height: 163%;
-}
 .header__main-list .header__main-item:first-child .header__main-bt-list {
   display: flex;
   flex-flow: row;
@@ -369,6 +364,23 @@ a {
   z-index: 5;
 }
 
+.header__main-sub {
+  font-size: calc(10px + 0.6vw);
+  line-height: 163%;
+}
+
+.header__main-title {
+  color: inherit;
+  font-size: calc(40px + 1.2vw);
+  line-height: 109%;
+}
+.header__main-title .green {
+  background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 .features_container {
   padding: 0 8.2677165354%;
   margin-bottom: 2.3622047244%;
@@ -431,8 +443,74 @@ a {
   line-height: 163%;
 }
 
+.delicious {
+  background: url(./img/delicious_waves.png) no-repeat;
+  background-size: 62% 60%;
+  background-position: 100% 120%;
+}
+
+.delicious__main-list {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.delicious__main-list .delicious__item:first-child {
+  flex: 0 1 42.1487603306%;
+}
+.delicious__main-list .delicious__item:first-child .delicious__item-wrap {
+  background: url(./img/bg_green_delicious.png) no-repeat bottom left;
+  background-size: 90% 90%;
+  padding-bottom: 141.1764705882%;
+  position: relative;
+}
+.delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+  display: block;
+  height: 108%;
+}
+.delicious__main-list .delicious__item:first-child ::after {
+  content: "";
+  position: absolute;
+  background: url(./img/delicious_bg_catch.png) no-repeat;
+  background-size: contain;
+  width: 48.0392156863%;
+  height: 48.0392156863%;
+  top: 0;
+  right: -5%;
+}
+.delicious__main-list .delicious__item:last-child {
+  flex: 0 1 36.9421487603%;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.delicious__main-list .delicious__item:last-child .delicious__item-bt-wrap {
+  background: url(./img/delicious_bt_bg.png) no-repeat;
+  background-size: cover;
+  padding: 22.3713646532% 13.6465324385%;
+  text-align: center;
+}
+.delicious__main-list .delicious__item:last-child .delicious__item-bt {
+  background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
+  border-radius: 82.834px;
+  padding: 4.4742729306% 18.5682326622% 4.4742729306% 18.5682326622%;
+  border: none;
+}
+.delicious__main-list .delicious__item:last-child .delicious__item-bt p {
+  background: url(./img/delicious_bt_play.png) no-repeat center left;
+  background-size: contain;
+  padding-left: 30px;
+  color: #ffffff;
+  font-size: calc(8px + 0.8vw);
+  line-height: 146%;
+  min-width: 135px;
+}
+
 @media (max-width: 910px) {
-  .nav-list .nav-main, .header__main-list .header__main-item:first-child .header__main-sub {
+  .nav-list .nav-main, .header__main-sub {
     font-family: "Montserrat";
     font-weight: 400;
   }
@@ -440,11 +518,11 @@ a {
     font-family: "Montserrat";
     font-weight: 500;
   }
-  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item {
+  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item, .delicious__main-list .delicious__item:last-child .delicious__item-bt p {
     font-family: "Montserrat";
     font-weight: 600;
   }
-  .header__main-list .header__main-item:first-child .header__main-title {
+  .header__main-title {
     font-family: "Montserrat";
     font-weight: 800;
   }
@@ -454,6 +532,15 @@ a {
     -o-object-fit: contain;
        object-fit: contain;
     position: absolute;
+  }
+  .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
     transition: 0.5s;
@@ -500,5 +587,33 @@ a {
     padding: 20%;
     top: -6%;
     left: 75%;
+  }
+  .delicious__main-list {
+    flex-flow: column;
+    width: 100%;
+    gap: 3vw;
+  }
+  .delicious__main-list .delicious__item:first-child {
+    width: 60%;
+  }
+  .delicious__main-list .delicious__item:last-child .delicious__item-bt-wrap {
+    width: 90%;
+    margin-top: 2vw;
+  }
+  .delicious__main-list .delicious__item:last-child {
+    width: 80%;
+  }
+  .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+    height: 107%;
+    width: 95%;
+  }
+  .delicious {
+    background: url(./img/delicious_bg_small_waves.png) no-repeat;
+    background-size: 100% 60%;
+    background-position: -10% -15%;
+  }
+  .delicious__main-list .delicious__item:first-child ::after {
+    top: 20%;
+    right: -55%;
   }
 }/*# sourceMappingURL=style.css.map */
