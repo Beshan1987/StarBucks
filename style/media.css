@@ -73,4 +73,15 @@
     top: 0%;
     background-size: contain;
   }
+  .products_slider {
+    margin-left: -80%;
+    padding-right: 25%;
+  }
+  .products_title {
+    flex-flow: column;
+    width: 80%;
+  }
+  .bt_next::before {
+    top: 25%;
+  }
 }/*# sourceMappingURL=media.css.map */

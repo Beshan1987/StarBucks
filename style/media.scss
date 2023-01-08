@@ -79,4 +79,17 @@
 		top: 0%;
 		background-size: contain;
 	}
+
+	.products_slider {
+		margin-left: -80%;
+		padding-right: calc(300 / 1200 * 100%);
+	}
+
+	.products_title {
+		flex-flow: column;
+		width: 80%;
+	}
+	.bt_next::before {
+		top: 25%;
+	}
 }

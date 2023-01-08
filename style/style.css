@@ -119,12 +119,12 @@ a {
     scroll-behavior: auto !important;
   }
 } /*# sourceMappingURL=reset.css.map */
-.header__main-sub, .nav-list .nav-main {
+.products__main-list .products__main-item .products__main-prices .products__main-size, .products__main-list .products__main-item .products__main-feature-sub, .header__main-sub, .nav-list .nav-main {
   font-family: "Montserrat";
   font-weight: 400;
 }
 
-.features__main-list .features__item .features__item-feature-sub, .features__main-list .features__item .features__item-feature {
+.products__main-list .products__main-item .products__main-prices, .products__main-list .products__main-item .products__main-feature, .features__main-list .features__item .features__item-feature-sub, .features__main-list .features__item .features__item-feature {
   font-family: "Montserrat";
   font-weight: 500;
 }
@@ -147,7 +147,7 @@ a {
   position: absolute;
 }
 
-.delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+.products__main-list .products__main-item .products__main-img-wrap .products__main-img, .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -170,16 +170,9 @@ a {
   cursor: pointer;
 }
 
-.delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list::after {
+.bt_next::before, .products_slider::after, .products_slider::before, .products_title .main_title_products::before, .delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list::after {
   content: "";
   position: absolute;
-  background-size: contain;
-}
-
-.delicious__main-list .delicious__item:first-child ::before {
-  content: "";
-  position: absolute;
-  background-size: cover;
 }
 
 .content {
@@ -259,13 +252,13 @@ a {
 }
 .header__main-list .header__main-item:first-child::after {
   content: "";
-  width: 90%;
-  height: 90%;
-  background: url(./img/main_left_bg.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url(./img/fog_green.png) no-repeat;
   background-size: contain;
   position: absolute;
   top: -25%;
-  left: -40%;
+  left: -30%;
   z-index: 1;
   transform: rotate(180deg);
 }
@@ -379,6 +372,8 @@ a {
 .header__main-sub {
   font-size: calc(10px + 0.6vw);
   line-height: 163%;
+  letter-spacing: -0.02em;
+  color: #d9d9d9;
 }
 
 .header__main-title {
@@ -522,6 +517,7 @@ a {
 }
 .delicious__main-list .delicious__item:last-child::after {
   background: url(./img/fog_grey.png) no-repeat center;
+  background-size: contain;
   padding-bottom: 100%;
   width: 100%;
   left: -29%;
@@ -529,6 +525,7 @@ a {
 }
 .delicious__main-list .delicious__item:last-child::before {
   background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
   padding-bottom: 100%;
   width: 100%;
   left: 0%;
@@ -573,12 +570,131 @@ a {
   left: -20%;
 }
 
+.products_title {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  gap: 5vw;
+  margin-bottom: 5.0806451613%;
+}
+.products_title .main_title_products {
+  flex: 0 1 30%;
+  position: relative;
+}
+.products_title .main_title_products::before {
+  background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
+  padding-bottom: 85%;
+  width: 89%;
+  left: 15%;
+  top: -65%;
+}
+.products_title .main_sub_products {
+  flex: 0 1 40%;
+}
+
+.products__main-list {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.products__main-list .products__main-item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  flex: 0 1 22%;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  gap: 1vw;
+  border: 0.1px solid #237249;
+  border-radius: 29px;
+  padding: 10px;
+}
+.products__main-list .products__main-item .products__main-img-wrap {
+  background: url(./img/circle_bg_main.png) no-repeat center;
+  background-size: contain;
+  position: relative;
+  padding-bottom: 134.6368715084%;
+  width: 100%;
+}
+.products__main-list .products__main-item .products__main-feature {
+  font-size: calc(15px + 1.5vw);
+  line-height: 163%;
+  color: inherit;
+  margin-top: -30px;
+}
+.products__main-list .products__main-item .products__main-feature-sub {
+  font-size: calc(10px + 0.9vw);
+  line-height: 163%;
+  color: #d9d9d9;
+  text-align: center;
+}
+.products__main-list .products__main-item .products__main-prices {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  gap: 1vw;
+  font-size: calc(15px + 0.9vw);
+  line-height: 163%;
+  color: #ffffff;
+}
+.products__main-list .products__main-item .products__main-prices .products__main-size {
+  font-size: calc(10px + 0.9vw);
+  line-height: 163%;
+  color: #d9d9d9;
+}
+
+.products_slider {
+  margin-left: -20%;
+  max-width: 1200px;
+  padding-right: 8.3333333333%;
+  position: relative;
+  z-index: 5;
+}
+.products_slider::before {
+  background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 55%;
+  top: -10%;
+}
+.products_slider::after {
+  background: url(./img/fog_grey.png) no-repeat center;
+  padding-bottom: 100%;
+  width: 100%;
+  left: -19%;
+  top: -55%;
+  opacity: 0.4;
+}
+
+.bt_next {
+  border: 1px solid green;
+  position: relative;
+}
+.bt_next::before {
+  background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
+  padding-bottom: 150%;
+  width: 150%;
+  left: -20%;
+  top: 35%;
+}
+
 @media (max-width: 910px) {
-  .nav-list .nav-main, .header__main-sub {
+  .nav-list .nav-main, .header__main-sub, .products__main-list .products__main-item .products__main-feature-sub, .products__main-list .products__main-item .products__main-prices .products__main-size {
     font-family: "Montserrat";
     font-weight: 400;
   }
-  .features__main-list .features__item .features__item-feature, .features__main-list .features__item .features__item-feature-sub {
+  .features__main-list .features__item .features__item-feature, .features__main-list .features__item .features__item-feature-sub, .products__main-list .products__main-item .products__main-feature, .products__main-list .products__main-item .products__main-prices {
     font-family: "Montserrat";
     font-weight: 500;
   }
@@ -597,7 +713,7 @@ a {
        object-fit: contain;
     position: absolute;
   }
-  .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img {
+  .delicious__main-list .delicious__item:first-child .delicious__item-wrap .delicious__item-img, .products__main-list .products__main-item .products__main-img-wrap .products__main-img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -617,15 +733,9 @@ a {
     color: #237249;
     cursor: pointer;
   }
-  .delicious__main-list::after, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before {
+  .delicious__main-list::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before, .products_title .main_title_products::before, .products_slider::before, .products_slider::after, .bt_next::before {
     content: "";
     position: absolute;
-    background-size: contain;
-  }
-  .delicious__main-list .delicious__item:first-child ::before {
-    content: "";
-    position: absolute;
-    background-size: cover;
   }
   .header__main-list {
     display: flex;
@@ -700,5 +810,16 @@ a {
     left: 47%;
     top: 0%;
     background-size: contain;
+  }
+  .products_slider {
+    margin-left: -80%;
+    padding-right: 25%;
+  }
+  .products_title {
+    flex-flow: column;
+    width: 80%;
+  }
+  .bt_next::before {
+    top: 25%;
   }
 }/*# sourceMappingURL=style.css.map */

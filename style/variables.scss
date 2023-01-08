@@ -63,11 +63,4 @@
 %before_contain {
 	content: "";
 	position: absolute;
-	background-size: contain;
-}
-
-%before_cover {
-	content: "";
-	position: absolute;
-	background-size: cover;
 }
