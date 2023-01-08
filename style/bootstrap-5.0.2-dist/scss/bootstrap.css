@@ -5703,7 +5703,7 @@ textarea.form-control-lg {
 }
 
 .carousel-control-next-icon {
-  background-image: url(/style/img/Arrow_2.png);
+  background-image: url(../scss/Arrow_2.png);
 }
 
 .carousel-indicators {
