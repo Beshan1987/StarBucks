@@ -483,6 +483,7 @@
 	padding-right: calc(100 / 1200 * 100%);
 	position: relative;
 	z-index: 5;
+	margin-bottom: calc(100 / 1240 * 100%);
 	&::before {
 		@extend %before_contain;
 		background: url(./img/fog_green.png) no-repeat center;
@@ -495,10 +496,10 @@
 	&::after {
 		@extend %before_contain;
 		background: url(./img/fog_grey.png) no-repeat center;
-		padding-bottom: 100%;
-		width: 100%;
-		left: -19%;
-		top: -55%;
+		padding-bottom: 50%;
+		width: 50%;
+		left: 9%;
+		top: -5%;
 		opacity: 0.4;
 	}
 }
@@ -521,4 +522,12 @@
 	width: 4rem;
 	height: 4rem;
 }
+
+.events_title {
+	@include flex(row, stretch, space-between, wrap);
+	flex-flow: row-reverse;
+	width: 70%;
+	margin-left: auto;
+}
+
 @import "media";

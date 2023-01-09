@@ -675,6 +675,7 @@ a {
   padding-right: 8.3333333333%;
   position: relative;
   z-index: 5;
+  margin-bottom: 8.064516129%;
 }
 .products_slider::before {
   background: url(./img/fog_green.png) no-repeat center;
@@ -686,10 +687,10 @@ a {
 }
 .products_slider::after {
   background: url(./img/fog_grey.png) no-repeat center;
-  padding-bottom: 100%;
-  width: 100%;
-  left: -19%;
-  top: -55%;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 9%;
+  top: -5%;
   opacity: 0.4;
 }
 
@@ -709,6 +710,17 @@ a {
 .products_bt_nxt {
   width: 4rem;
   height: 4rem;
+}
+
+.events_title {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-flow: row-reverse;
+  width: 70%;
+  margin-left: auto;
 }
 
 @media (max-width: 910px) {
