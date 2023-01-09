@@ -88,4 +88,10 @@
   .bt_next::before {
     top: 25%;
   }
+  .events_title {
+    flex-flow: column;
+    width: 80%;
+    margin: 0 auto;
+    gap: 3vw;
+  }
 }/*# sourceMappingURL=media.css.map */

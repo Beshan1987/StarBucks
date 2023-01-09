@@ -201,6 +201,8 @@ a {
 .navigation {
   padding-top: 3.8709677419%;
   margin-bottom: 6.4516129032%;
+  z-index: 5;
+  position: relative;
 }
 
 .nav-list {
@@ -210,7 +212,7 @@ a {
   justify-content: stretch;
   flex-wrap: wrap;
   gap: 5vw;
-  z-index: 5;
+  z-index: 10;
   position: relative;
 }
 .nav-list .nav-main {
@@ -300,6 +302,7 @@ a {
 .header__main-list .header__main-item:first-child .header__main-bt-list ._black {
   flex: 1 1 29.298245614%;
   background: #121517;
+  border: 0.1px solid transparent;
 }
 .header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover {
   border: 0.1px solid #35c66b;
@@ -335,6 +338,7 @@ a {
 .header__main-list .header__main-item:last-child {
   flex: 0 1 37.9032258065%;
   position: relative;
+  z-index: 5;
   padding-bottom: 50.6451612903%;
 }
 .header__main-list .header__main-item:last-child::after {
@@ -360,12 +364,13 @@ a {
 .header__main-list .header__main-item:last-child::before {
   content: "";
   width: 143.829787234%;
-  height: 100%;
+  height: 90%;
   background: url(./img/cup_bg_left.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: -25%;
-  left: -40%;
+  top: -15%;
+  left: -27%;
+  z-index: 0;
 }
 .header__main-list .header__main-item:last-child .header__main-img {
   -o-object-fit: cover;
@@ -863,5 +868,11 @@ a {
   }
   .bt_next::before {
     top: 25%;
+  }
+  .events_title {
+    flex-flow: column;
+    width: 80%;
+    margin: 0 auto;
+    gap: 3vw;
   }
 }/*# sourceMappingURL=style.css.map */

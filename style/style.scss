@@ -27,11 +27,13 @@
 .navigation {
 	padding-top: calc(48 / 1240 * 100%);
 	margin-bottom: calc(80 / 1240 * 100%);
+	z-index: 5;
+	position: relative;
 }
 .nav-list {
 	@include flex(row, center, stretch, wrap);
 	gap: 5vw;
-	z-index: 5;
+	z-index: 10;
 	position: relative;
 	.nav-main {
 		color: #d9d9d9;
@@ -119,9 +121,11 @@
 			._black {
 				flex: 1 1 calc(167 / 570 * 100%);
 				background: #121517;
+				border: 0.1px solid transparent;
+
 				&:hover {
 					@extend %hover_bt;
-					border: 0.1px solid#35c66b;
+					border: 0.1px solid #35c66b;
 				}
 			}
 		}
@@ -147,6 +151,7 @@
 	.header__main-item:last-child {
 		flex: 0 1 calc(470 / 1240 * 100%);
 		position: relative;
+		z-index: 5;
 		padding-bottom: calc(628 / 1240 * 100%);
 		&::after {
 			content: "";
@@ -171,12 +176,13 @@
 		&::before {
 			content: "";
 			width: calc(676 / 470 * 100%);
-			height: 100%;
+			height: 90%;
 			background: url(./img/cup_bg_left.png) no-repeat;
 			background-size: contain;
 			position: absolute;
-			top: -25%;
-			left: -40%;
+			top: -15%;
+			left: -27%;
+			z-index: 0;
 		}
 		.header__main-img {
 			@extend %adapt_img;
