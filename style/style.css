@@ -170,7 +170,7 @@ a {
   cursor: pointer;
 }
 
-.bt_next::before, .products_slider::after, .products_slider::before, .products_title .main_title_products::before, .delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list::after, .features_container::after {
+.events__main-list::before, .events__main-list::after, .bt_next::before, .products_slider::after, .products_slider::before, .products_title .main_title_products::before, .delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list::after, .features_container::after {
   content: "";
   position: absolute;
 }
@@ -737,6 +737,26 @@ a {
   grid-template-columns: repeat(6, 1fr);
   gap: 1.5vw;
   margin-bottom: 12.0967741935%;
+  position: relative;
+  z-index: 5;
+}
+.events__main-list::after {
+  background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
+  padding-bottom: 50%;
+  width: 50%;
+  left: -16%;
+  top: -10%;
+  z-index: -5;
+}
+.events__main-list::before {
+  background: url(./img/fog_grey.png) no-repeat;
+  background-size: contain;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 40%;
+  top: -1%;
+  z-index: -5;
 }
 .events__main-list .events__main-item:nth-child(1) {
   grid-column: 1/4;
@@ -850,7 +870,7 @@ a {
     color: #237249;
     cursor: pointer;
   }
-  .features_container::after, .delicious__main-list::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before, .products_title .main_title_products::before, .products_slider::before, .products_slider::after, .bt_next::before {
+  .features_container::after, .delicious__main-list::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before, .products_title .main_title_products::before, .products_slider::before, .products_slider::after, .bt_next::before, .events__main-list::after, .events__main-list::before {
     content: "";
     position: absolute;
   }
