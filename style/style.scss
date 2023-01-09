@@ -175,8 +175,8 @@
 			background: url(./img/cup_bg_left.png) no-repeat;
 			background-size: contain;
 			position: absolute;
-			top: -20%;
-			left: -30%;
+			top: -25%;
+			left: -40%;
 		}
 		.header__main-img {
 			@extend %adapt_img;
@@ -528,6 +528,10 @@
 	flex-flow: row-reverse;
 	width: 70%;
 	margin-left: auto;
+	margin-bottom: calc(54 / 1240 * 100%);
+	.main_sub_events {
+		flex: 0 1 60%;
+	}
 }
 
 @import "media";

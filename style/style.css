@@ -364,8 +364,8 @@ a {
   background: url(./img/cup_bg_left.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: -20%;
-  left: -30%;
+  top: -25%;
+  left: -40%;
 }
 .header__main-list .header__main-item:last-child .header__main-img {
   -o-object-fit: cover;
@@ -721,6 +721,10 @@ a {
   flex-flow: row-reverse;
   width: 70%;
   margin-left: auto;
+  margin-bottom: 4.3548387097%;
+}
+.events_title .main_sub_events {
+  flex: 0 1 60%;
 }
 
 @media (max-width: 910px) {
