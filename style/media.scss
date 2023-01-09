@@ -19,17 +19,21 @@
 	.features__main-list {
 		flex-flow: column;
 		margin: 0 auto;
-		width: 80%;
+		width: 60%;
 	}
 	.features__main-list::before {
-		top: -12%;
-		left: 40%;
-		padding: 40%;
+		top: -23%;
+		left: 18%;
+		padding: 69%;
+		transform: rotate(287deg);
 	}
 	.features__main-list::after {
 		padding: 20%;
 		top: -6%;
 		left: 75%;
+	}
+	.features_container::after {
+		background: none;
 	}
 	.delicious__main-list {
 		flex-flow: column;

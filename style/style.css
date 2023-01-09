@@ -157,7 +157,7 @@ a {
   left: 0;
 }
 
-.delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
+.delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover, .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
   transition: 0.5s;
   opacity: 0.8;
   cursor: pointer;
@@ -170,7 +170,7 @@ a {
   cursor: pointer;
 }
 
-.bt_next::before, .products_slider::after, .products_slider::before, .products_title .main_title_products::before, .delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list::after {
+.bt_next::before, .products_slider::after, .products_slider::before, .products_title .main_title_products::before, .delicious__main-list .delicious__item:last-child::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list::after, .features_container::after {
   content: "";
   position: absolute;
 }
@@ -252,12 +252,12 @@ a {
 }
 .header__main-list .header__main-item:first-child::after {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 70%;
   background: url(./img/fog_green.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: -25%;
+  top: -17%;
   left: -30%;
   z-index: 1;
   transform: rotate(180deg);
@@ -291,6 +291,7 @@ a {
   border: none;
   padding: 3.5087719298% 0;
   display: block;
+  transition: 0.5s;
 }
 .header__main-list .header__main-item:first-child .header__main-bt-list ._green-bt {
   flex: 0 1 58.4210526316%;
@@ -299,6 +300,9 @@ a {
 .header__main-list .header__main-item:first-child .header__main-bt-list ._black {
   flex: 1 1 29.298245614%;
   background: #121517;
+}
+.header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover {
+  border: 0.1px solid #35c66b;
 }
 .header__main-list .header__main-item:first-child .header__main-awards-list {
   display: flex;
@@ -318,7 +322,7 @@ a {
 }
 .header__main-list .header__main-item:first-child .header__main-awards-list .header__main-awards-item .header__main-awards-value {
   color: inherit;
-  font-size: calc(50px + 0.6vw);
+  font-size: calc(40px + 0.7vw);
   line-height: 109%;
 }
 .header__main-list .header__main-item:first-child .header__main-awards-list .header__main-awards-item .header__main-awards-value span {
@@ -391,6 +395,16 @@ a {
 .features_container {
   padding: 0 8.2677165354%;
   margin-bottom: 2.3622047244%;
+  position: relative;
+  z-index: 5;
+}
+.features_container::after {
+  background: url(./img/fog_grey.png) no-repeat;
+  background-size: contain;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 54%;
+  top: -1%;
 }
 
 .features__main-list {
@@ -404,6 +418,7 @@ a {
   padding: 3.9805825243% 7.572815534%;
   position: relative;
   margin-top: -40%;
+  z-index: 5;
 }
 .features__main-list::after {
   content: "";
@@ -467,11 +482,12 @@ a {
   z-index: 5;
 }
 .delicious__main-list::after {
-  background: url(./img/fog_grey.png) no-repeat center;
-  padding-bottom: 100%;
-  width: 100%;
-  left: -19%;
-  top: -55%;
+  background: url(./img/fog_grey.png) no-repeat;
+  background-size: contain;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 5%;
+  top: -10%;
 }
 .delicious__main-list .delicious__item:first-child {
   flex: 0 1 42.1487603306%;
@@ -500,10 +516,11 @@ a {
 }
 .delicious__main-list .delicious__item:first-child ::before {
   background: url(./img/fog_green.png) no-repeat center;
+  background-size: contain;
   padding-bottom: 100%;
   width: 100%;
   left: -40%;
-  bottom: -20%;
+  bottom: -30%;
 }
 .delicious__main-list .delicious__item:last-child {
   flex: 0 1 36.9421487603%;
@@ -689,6 +706,11 @@ a {
   top: 35%;
 }
 
+.products_bt_nxt {
+  width: 4rem;
+  height: 4rem;
+}
+
 @media (max-width: 910px) {
   .nav-list .nav-main, .header__main-sub, .products__main-list .products__main-item .products__main-feature-sub, .products__main-list .products__main-item .products__main-prices .products__main-size {
     font-family: "Montserrat";
@@ -722,7 +744,7 @@ a {
     top: 0;
     left: 0;
   }
-  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover {
+  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover, .header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover {
     transition: 0.5s;
     opacity: 0.8;
     cursor: pointer;
@@ -733,7 +755,7 @@ a {
     color: #237249;
     cursor: pointer;
   }
-  .delicious__main-list::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before, .products_title .main_title_products::before, .products_slider::before, .products_slider::after, .bt_next::before {
+  .features_container::after, .delicious__main-list::after, .delicious__main-list .delicious__item:first-child ::before, .delicious__main-list .delicious__item:last-child::after, .delicious__main-list .delicious__item:last-child::before, .products_title .main_title_products::before, .products_slider::before, .products_slider::after, .bt_next::before {
     content: "";
     position: absolute;
   }
@@ -760,17 +782,21 @@ a {
   .features__main-list {
     flex-flow: column;
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
   }
   .features__main-list::before {
-    top: -12%;
-    left: 40%;
-    padding: 40%;
+    top: -23%;
+    left: 18%;
+    padding: 69%;
+    transform: rotate(287deg);
   }
   .features__main-list::after {
     padding: 20%;
     top: -6%;
     left: 75%;
+  }
+  .features_container::after {
+    background: none;
   }
   .delicious__main-list {
     flex-flow: column;
