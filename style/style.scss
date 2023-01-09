@@ -543,7 +543,7 @@
 .events__main-list {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	gap: 2vw;
+	gap: 1.5vw;
 	margin-bottom: calc(150 / 1240 * 100%);
 	.events__main-item:nth-child(1) {
 		grid-column: 1/4;
