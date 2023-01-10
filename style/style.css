@@ -157,7 +157,7 @@ a {
   left: 0;
 }
 
-.events__main-item .events__main-bt:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover, .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
+.events__main-item .events__main-bt:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover {
   transition: 0.5s;
   opacity: 0.8;
   cursor: pointer;
@@ -295,6 +295,9 @@ a {
   display: block;
   transition: 0.5s;
 }
+.header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover {
+  cursor: pointer;
+}
 .header__main-list .header__main-item:first-child .header__main-bt-list ._green-bt {
   flex: 0 1 58.4210526316%;
   background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
@@ -302,10 +305,22 @@ a {
 .header__main-list .header__main-item:first-child .header__main-bt-list ._black {
   flex: 1 1 29.298245614%;
   background: #121517;
-  border: 0.1px solid transparent;
+  border: 1.02px solid transparent;
+  position: relative;
 }
-.header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover {
-  border: 0.1px solid #35c66b;
+.header__main-list .header__main-item:first-child .header__main-bt-list ._black :hover {
+  opacity: 0.8;
+}
+.header__main-list .header__main-item:first-child .header__main-bt-list ._black::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: linear-gradient(146.68deg, #dadada -17.38%, rgba(218, 218, 218, 0) 91.61%);
+  z-index: -1;
+  border-radius: 82.834px;
 }
 .header__main-list .header__main-item:first-child .header__main-awards-list {
   display: flex;
@@ -859,7 +874,7 @@ a {
     top: 0;
     left: 0;
   }
-  .header__main-list .header__main-item:first-child .header__main-bt-list .header__main-bt-item:hover, .header__main-list .header__main-item:first-child .header__main-bt-list ._black:hover, .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .events__main-item .events__main-bt:hover {
+  .delicious__main-list .delicious__item:last-child .delicious__item-bt:hover, .events__main-item .events__main-bt:hover {
     transition: 0.5s;
     opacity: 0.8;
     cursor: pointer;

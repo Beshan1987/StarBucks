@@ -111,7 +111,7 @@
 				display: block;
 				transition: 0.5s;
 				&:hover {
-					@extend %hover_bt;
+					cursor: pointer;
 				}
 			}
 			._green-bt {
@@ -121,11 +121,25 @@
 			._black {
 				flex: 1 1 calc(167 / 570 * 100%);
 				background: #121517;
-				border: 0.1px solid transparent;
-
-				&:hover {
-					@extend %hover_bt;
-					border: 0.1px solid #35c66b;
+				border: 1.02px solid transparent;
+				position: relative;
+				:hover {
+					opacity: 0.8;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					top: -2px;
+					left: -2px;
+					bottom: -2px;
+					right: -2px;
+					background: linear-gradient(
+						146.68deg,
+						#dadada -17.38%,
+						rgba(218, 218, 218, 0) 91.61%
+					);
+					z-index: -1;
+					border-radius: 82.834px;
 				}
 			}
 		}
