@@ -132,4 +132,18 @@
     grid-column: 1/2;
     grid-row: 5/6;
   }
+  .contacts__main {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+    width: 70%;
+  }
+  .contacts {
+    background: url(./img/bg_contacts_small.png) no-repeat right;
+    background-size: 100% 100%;
+    background-position-y: -20%;
+  }
 }/*# sourceMappingURL=media.css.map */
