@@ -730,5 +730,9 @@
 		}
 	}
 }
+.footer {
+	padding-top: calc(64 / 1240 * 100%);
+	background: #0b0c0d;
+}
 
 @import "media";

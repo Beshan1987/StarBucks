@@ -935,6 +935,11 @@ a {
   z-index: -5;
 }
 
+.footer {
+  padding-top: 5.1612903226%;
+  background: #0b0c0d;
+}
+
 @media (max-width: 910px) {
   .nav-list .nav-main, .header__main-sub, .products__main-list .products__main-item .products__main-feature-sub, .products__main-list .products__main-item .products__main-prices .products__main-size {
     font-family: "Montserrat";
