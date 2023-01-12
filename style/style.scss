@@ -689,7 +689,10 @@
 			.contacts__main-link {
 				@include font_size(calc(10px + 1.1vw), 108%);
 				@extend %font_500;
-				flex: 0 1 85%;
+				flex: 0 1 80%;
+			}
+			._padding {
+				padding: 7px;
 			}
 			.contacts__main-icon {
 				flex: 0 1 10%;
