@@ -473,9 +473,9 @@
 		}
 		.products__main-feature {
 			@extend %font_500;
-			@include font_size(calc(15px + 1.5vw), 163%);
+			@include font_size(calc(13px + 1vw), 163%);
 			color: inherit;
-			margin-top: -30px;
+			margin-top: calc(-30 / (1240 * 0.2) * 100%);
 		}
 		.products__main-feature-sub {
 			@extend %font_400;
@@ -661,7 +661,7 @@
 }
 .contacts__main {
 	@include flex(row, stretch, space-between, wrap);
-	padding-bottom: calc(108 / 1240 * 100%);
+	padding-bottom: calc(160 / 1240 * 100%);
 	margin-bottom: calc(-108 / 1240 * 100%);
 	.contacts__main-item {
 		@include flex(column, stretch, space-around, wrap);
@@ -731,8 +731,72 @@
 	}
 }
 .footer {
-	padding-top: calc(64 / 1240 * 100%);
+	padding-top: calc(40 / 1240 * 100%);
 	background: #0b0c0d;
+}
+
+.footer__nav-list-whole {
+	@include flex(row, stretch, space-between, wrap);
+	.footer__nav-list-inner {
+		@include flex(column, stretch, stretch, wrap);
+		gap: 0.5vw;
+
+		> li {
+			@extend %font_400;
+			@include font_size(calc(10px + 0.8vw), calc(24 / 20 * 100%));
+			background: rgba(187, 179, 179, 0.43);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			transition: 0.5s;
+			&:hover {
+				@extend %hover_link;
+				background: #237249;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+			}
+		}
+		.footer__nav-item:first-child {
+			@extend %font_400;
+			@include font_size(calc(10px + 0.8vw), calc(24 / 20 * 100%));
+			-webkit-text-fill-color: #bbb3b3;
+			letter-spacing: -0.01em;
+			transition: 0.5s;
+		}
+		.footer__nav-bt-wrap {
+			@include flex(row, stretch, flex-end, wrap);
+		}
+	}
+
+	.footer__nav-bt,
+	.footer__nav-label {
+		object-fit: contain;
+		width: calc(30% + 5vw);
+	}
+}
+
+.footer__nav-under {
+	padding-top: calc(120 / 1240 * 100%);
+	padding-bottom: calc(45 / 1240 * 100%);
+	@include flex(row, center, stretch, wrap);
+	.footer__nav-under-item {
+		@extend %font_400;
+		@include font_size(calc(10px + 0.8vw), calc(24 / 20 * 100%));
+		background: linear-gradient(267.2deg, #237249 3.05%, #35c66b 75.72%);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+	> *:hover {
+		@extend %hover_link;
+	}
+	.footer__nav-social-wrap {
+		margin-left: auto;
+	}
+
+	.footer__nav-bt {
+		object-fit: contain;
+		width: calc(30% + 5vw);
+		margin-left: auto;
+	}
 }
 
 @import "media";

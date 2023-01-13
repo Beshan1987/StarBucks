@@ -177,4 +177,30 @@
 		flex: 1;
 		padding-left: 0.5vw;
 	}
+
+	.footer__nav-list-whole {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3vw;
+
+		.footer__nav-list-inner:nth-child(1) {
+			grid-column: 1/3;
+			grid-row: 1/2;
+		}
+
+		.footer__nav-list-inner:nth-child(7) {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			margin-bottom: 5vw;
+		}
+	}
+	.footer__nav-under {
+		padding-top: 2%;
+	}
+	.contacts__main .contacts__main-item::before {
+		top: -25%;
+	}
+	.footer__nav-bt-wrap {
+		margin-right: 0;
+	}
 }
